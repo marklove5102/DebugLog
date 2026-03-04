@@ -15,7 +15,7 @@ namespace debug {
         bool b_base_reset {true};
 
 #ifdef ARDUINO
-        Stream* stream {&Serial};
+        Stream* stream {&DEBUGLOG_DEFAULT_ARDUINO_STREAM};
         FileLogger* logger {nullptr};
         LogLevel file_lvl {DEBUGLOG_DEFAULT_FILE_LEVEL};
         bool b_auto_save {false};

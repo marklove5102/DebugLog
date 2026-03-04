@@ -132,4 +132,8 @@ namespace debug {
 #define DEBUGLOG_DEFAULT_FILE_LEVEL LogLevel::LVL_ERROR
 #endif
 
+#ifndef DEBUGLOG_DEFAULT_ARDUINO_STREAM
+#define DEBUGLOG_DEFAULT_ARDUINO_STREAM Serial
+#endif
+
 #endif  // DEBUGLOG_TYPES_H
