@@ -115,6 +115,13 @@ LOG_ATTACH_STREAM(your_tcp_client);
 LOG_ATTACH_STREAM(any_other_stream);
 ```
 
+The default can be changed by defining `DEBUGLOG_DEFAULT_ARDUINO_STREAM` before including `DebugLog.h`:
+
+```cpp
+#define DEBUGLOG_DEFAULT_ARDUINO_STREAM Serial2
+#include <DebugLog.h>
+```
+
 ### Log Preamble Control
 
 The `LOG_PREAMBLE` macro is called every `LOG_XXXX`. It defines a string that will be printed between the `[LEVEL]` and your custom message. To override the default definition, you must define the macro **before** you `#include <DebugLog.h>`
